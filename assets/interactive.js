@@ -36,7 +36,7 @@ export default class Interactive extends Component {
             Thats real cool and all
           </Heading>
           <Heading textSize="2em" textColor="black">
-            But what about clicking stuff?
+            But what about interactive stuff?
           </Heading>
           <button style={styles} type="button" onClick={this.handleClick}>{this.state.count} clicks</button>
         </div> :
