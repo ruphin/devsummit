@@ -483,7 +483,7 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/9.html")}
             ranges={[
               { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">State Management</Text>},
-              { loc: [2, 7], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Lets say our element has some internal state</Text>},
+              { loc: [2, 7], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Our element can have some internal state</Text>},
               { loc: [10, 16], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We want that state to be represented by properties</Text>},
               { loc: [16, 23], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Use getter and setter functions to control side effects of state change</Text>},
               { loc: [16, 20], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">The setter function is called when setting our property</Text>},
@@ -502,13 +502,13 @@ export default class Presentation extends React.Component {
             lang="html"
             code={require("raw!../assets/code/10.html")}
             ranges={[
-              { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We can use this for 'data-binding'</Text>},
-              { loc: [4, 9], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Lets say we want to make a simple counter</Text>},
-              { loc: [6, 7], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Create a placeholder element where we can fill our value</Text>},
-              { loc: [12, 19], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">A property holds our state</Text>},
-              { loc: [12, 19], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Clicking the button just updates our state</Text>},
-              { loc: [19, 23], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Use the setter to insert our property value into the placeholder</Text>},
-              { loc: [0, 17], },
+              { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We can easily create a simple 'data-binding'</Text>},
+              { loc: [2, 7], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Lets make a counter</Text>},
+              { loc: [4, 5], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Create a placeholder element where we can fill our value</Text>},
+              { loc: [10, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">A property holds our state</Text>},
+              { loc: [15, 16], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Clicking the button just updates our state</Text>},
+              { loc: [17, 21], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Use the setter to insert our property value into the placeholder</Text>},
+              { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white"><Link textColor="white" href="https://webcomponents.ruph.in/lessons/demo/10.html"><span style={{textDecoration: "underline"}}>Demo</span></Link></Text> },
             ]}></CodeSlide>
 
           <CodeSlide
@@ -520,9 +520,8 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/11.html")}
             ranges={[
               { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Attributes are useful to semantically set our initial state</Text>},
-              { loc: [2, 3], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We want our element to be configurable from HTML</Text>},
-              { loc: [19, 22], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">connectedCallback to the rescue! All we have to do is set the state</Text>},
-              { loc: [0, 17], },
+              { loc: [0, 1], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We want our element to be configurable from HTML</Text>},
+              { loc: [17, 20], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">connectedCallback to the rescue! All we have to do is set the state</Text>},
             ]}></CodeSlide>
 
           <CodeSlide
@@ -534,10 +533,11 @@ export default class Presentation extends React.Component {
             code={require("raw!../assets/code/12.html")}
             ranges={[
               { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We can also observe changes to our attribute</Text>},
-              { loc: [19, 22], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We have to tell the browser what attributes we want to observe</Text>},
-              { loc: [22, 27], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">If any of these attributes change, the browser calls this callback</Text>},
-              { loc: [23, 24], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We check if the value is different from our property</Text>},
-              { loc: [0, 17], },
+              { loc: [17, 20], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We have to tell the browser what attributes we want to observe</Text>},
+              { loc: [20, 25], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">If any of these attributes change, the browser calls this callback</Text>},
+              { loc: [21, 22], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We check if the value is different from our property</Text>},
+              { loc: [22, 23], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">If the value changed, we update the property</Text>},
+              { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white"><Link textColor="white" href="https://webcomponents.ruph.in/lessons/demo/12.html"><span style={{textDecoration: "underline"}}>Demo</span></Link></Text> },
             ]}></CodeSlide>
 
 
@@ -549,11 +549,11 @@ export default class Presentation extends React.Component {
             lang="html"
             code={require("raw!../assets/code/15.html")}
             ranges={[
-              { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Distributing child nodes</Text>},
-              { loc: [2, 5], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Sometimes we want our elements to carry child nodes</Text>},
-              { loc: [6, 10], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">To insert child nodes, use &lt;slot&gt; in the Template</Text>},
-              { loc: [2, 10], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">The content in our element is mounted in the &lt;slot&gt; in our Template</Text>},
-              { loc: [0, 17], },
+              { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Distributing child nodes</Text>},
+              { loc: [0, 3], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Sometimes we want our elements to carry child nodes</Text>},
+              { loc: [4, 8], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">To insert child nodes, use &lt;slot&gt; in the Template</Text>},
+              { loc: [0, 8], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">The content in our element is mounted in the &lt;slot&gt; in our Template</Text>},
+              { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white"><Link textColor="white" href="https://webcomponents.ruph.in/lessons/demo/15.html"><span style={{textDecoration: "underline"}}>Demo</span></Link></Text> },
             ]}></CodeSlide>
 
           <CodeSlide
@@ -564,14 +564,19 @@ export default class Presentation extends React.Component {
             lang="html"
             code={require("raw!../assets/code/18.html")}
             ranges={[
-              { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Two nested elements</Text>},
-              { loc: [51, 60], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">When a property is set, update our bindings, reflect to our attribute, and fire an event</Text>},
-              { loc: [83, 89], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Elements listen to events fired by children, and update their own state if needed</Text>},
-              { loc: [0, 17], },
+              { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">You can make things as complex as you can imagine</Text>},
+              { loc: [49, 58], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">When a property is set, update bindings, reflect to attribute, and fire an event</Text>},
+              { loc: [81, 87], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Elements listen to events fired by children, and update their own state if needed</Text>},
+              { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white"><Link textColor="white" href="https://webcomponents.ruph.in/lessons/demo/18.html"><span style={{textDecoration: "underline"}}>Demo</span></Link></Text> },
             ]}></CodeSlide>
 
 
 
+          <Slide transition={["slide"]} bgColor="pink" maxWidth={1200}>
+            <Heading size={1} fit caps lineHeight={1} margin="0 0 3rem 0" textColor="white">
+              NOPE
+            </Heading>
+          </Slide>
 
 
 
