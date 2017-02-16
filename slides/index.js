@@ -52,8 +52,12 @@ const images = {
   how: require("../assets/how.gif"),
   fire: require("../assets/fire.gif"),
   holdOn: require("../assets/hold-on.gif"),
+  browserSupport: require("../assets/browserSupport.png"),
   browsers: require("../assets/browsers.gif"),
   shadow: require("../assets/shadow.gif"),
+  party2: require("../assets/party2.gif"),
+  party3: require("../assets/party3.gif"),
+  polymer: require("../assets/polymer.png"),
   build: require("../assets/build.jpg"),
 };
 
@@ -572,45 +576,94 @@ export default class Presentation extends React.Component {
 
 
 
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" caps lineHeight={1} margin="0 0 .4em 0" textColor="white">
+              That webcomponent spec
+            </Heading><Heading textSize="1.6em" caps lineHeight={1} textColor="white">
+              will never make it
+            </Heading>
+          </Slide>
+
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" margin="-1em 0 0 0" caps textColor="white">
+              The spec already passed
+            </Heading>
+            <Image src={images.party3.replace("/", "")} width="80%" />
+          </Slide>
+
+          <Slide transition={["zoom"]} bgColor="black" maxWidth={1200}>
+            <Image src={images.browserSupport.replace("/", "")} />
+          </Slide>
+
+          <Slide transition={["zoom"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" margin="-1em 0 0 0" caps textColor="white">
+              Some things never change
+            </Heading>
+            <Image src={images.browsers.replace("/", "")} width="80%" />
+          </Slide>
+
+
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" caps lineHeight={1} margin="0 0 .4em 0" textColor="white">
+              Those polyfills
+            </Heading><Heading textSize="1.6em" caps lineHeight={1} textColor="white">
+              are pretty slow
+            </Heading>
+          </Slide>
+
           <Slide transition={["slide"]} bgColor="pink" maxWidth={1200}>
             <Heading size={1} fit caps lineHeight={1} margin="0 0 3rem 0" textColor="white">
               NOPE
             </Heading>
           </Slide>
 
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" caps lineHeight={1} margin="0 0 .4em 0" textColor="white">
+              Yeah ok, but its not ready
+            </Heading><Heading textSize="1.6em" caps lineHeight={1} textColor="white">
+              for serious business yet
+            </Heading>
+          </Slide>
 
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" margin="-1em 0 0 0" caps textColor="white">
+              It totally is!
+            </Heading>
+            <Link textColor="white" href="https://webcomponents.ruph.in"><Image src={images.party2.replace("/", "")} width="80%" /></Link>
+          </Slide>
 
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" caps textColor="white">
+              <Link textColor="white" href="https://github.com/ruphin/webdev">Github</Link>
+            </Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="3em" caps textColor="white">
+              <Link textColor="white" href="https://ea.com">EA</Link>
+            </Heading>
+          </Slide>
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="4.5em" caps textColor="white">
+              <Link textColor="white" href="https://youtube.com">Youtube</Link>
+            </Heading>
+          </Slide>
 
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" caps margin="-1em 0 0 0" textColor="white">
+              Use Polymer
+            </Heading>
+            <Link href="https://www.polymer-project.org"><Image src={images.polymer.replace("/", "")} /></Link>
+          </Slide>
 
-
-
-
-                    <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
-                      <Heading textSize="1.6em" caps margin="-1em 0 0 0" textColor="white">
-                        You dont need a build pipeline
-                      </Heading>
-                      <Heading textSize="1.6em" caps textColor="white">
-                        if you have nothing to build
-                      </Heading>
-                      <Image src={images.build.replace("/", "")} />
-                    </Slide>
-
-
-
-
-
-
-
-
-                    <Slide transition={["zoom"]} bgColor="black" maxWidth={1200}>
-                      <Heading textSize="1.6em" margin="-1em 0 0 0" caps textColor="white">
-                        Some things never change
-                      </Heading>
-                      <Image src={images.browsers.replace("/", "")} width="80%" />
-                    </Slide>
-
-
-
+          <Slide transition={["slide"]} bgColor="black" maxWidth={1200}>
+            <Heading textSize="1.6em" caps margin="-1em 0 0 0" textColor="white">
+              You dont need a build pipeline
+            </Heading>
+            <Heading textSize="1.6em" caps textColor="white">
+              if you have nothing to build
+            </Heading>
+            <Image src={images.build.replace("/", "")} />
+          </Slide>
 
           <Slide transition={["spin", "slide"]} bgColor="primary" maxWidth={1200}>
             <Image src={images.textThankyou.replace("/", "")} width="100%" />
@@ -625,6 +678,16 @@ export default class Presentation extends React.Component {
             </Heading>
             <Link textSize="1.5em" textColor="white" href="https://webcomponents.ruph.in">
               webcomponents.ruph.in/
+            </Link>
+          </Slide>
+
+
+          <Slide transition={["spin", "slide"]} bgColor="primary" maxWidth={1200}>
+            <Heading textSize="2em" margin="0 0 0.4em 0" textColor="white">
+              We are hiring!
+            </Heading>
+            <Link textSize="1.5em" textColor="white" href="https://phusion.nl/careers">
+              phusion.nl/careers
             </Link>
           </Slide>
         </Deck>
