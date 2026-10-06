@@ -35,30 +35,69 @@ import createTheme from "spectacle/lib/themes/default";
 import Interactive from "../assets/interactive";
 
 // Require CSS
-require("normalize.css");
-require("spectacle/lib/themes/default/index.css");
+import "normalize.css";
+import "spectacle/lib/themes/default/index.css";
+
+import img_textWebcomponents from "../assets/text-webcomponents.png";
+import img_textHtml from "../assets/text-html.png";
+import img_textCustomelements from "../assets/text-customelements.png";
+import img_textThankyou from "../assets/text-thankyou.png";
+import img_textGoffertvangool from "../assets/text-goffertvangool.png";
+import img_swirl from "../assets/swirl.png";
+import img_party from "../assets/party.gif";
+import img_frameworks from "../assets/frameworks.png";
+import img_xkcd from "../assets/xkcd.png";
+import img_how from "../assets/how.gif";
+import img_fire from "../assets/fire.gif";
+import img_holdOn from "../assets/hold-on.gif";
+import img_browserSupport from "../assets/browserSupport.png";
+import img_browsers from "../assets/browsers.gif";
+import img_shadow from "../assets/shadow.gif";
+import img_party2 from "../assets/party2.gif";
+import img_party3 from "../assets/party3.gif";
+import img_polymer from "../assets/polymer.png";
+import img_build from "../assets/build.jpg";
+import raw_tags from "../assets/tags.txt?raw";
+import raw_divs from "../assets/divs.txt?raw";
+import raw_jquery from "../assets/jquery.txt?raw";
+import raw_vanilla from "../assets/vanilla.txt?raw";
+import raw_tags2 from "../assets/tags2.txt?raw";
+import raw_code_1 from "../assets/code/1.html?raw";
+import raw_code_2 from "../assets/code/2.html?raw";
+import raw_code_3 from "../assets/code/3.html?raw";
+import raw_code_4 from "../assets/code/4.html?raw";
+import raw_code_5 from "../assets/code/5.html?raw";
+import raw_code_6 from "../assets/code/6.html?raw";
+import raw_code_7 from "../assets/code/7.html?raw";
+import raw_code_8 from "../assets/code/8.html?raw";
+import raw_code_9 from "../assets/code/9.html?raw";
+import raw_code_10 from "../assets/code/10.html?raw";
+import raw_code_11 from "../assets/code/11.html?raw";
+import raw_code_12 from "../assets/code/12.html?raw";
+import raw_code_15 from "../assets/code/15.html?raw";
+import raw_code_18 from "../assets/code/18.html?raw";
 
 
 const images = {
-  textWebcomponents: require("../assets/text-webcomponents.png"),
-  textHtml: require("../assets/text-html.png"),
-  textCustomelements: require("../assets/text-customelements.png"),
-  textThankyou: require("../assets/text-thankyou.png"),
-  textGoffertvangool: require("../assets/text-goffertvangool.png"),
-  swirl: require("../assets/swirl.png"),
-  party: require("../assets/party.gif"),
-  frameworks: require("../assets/frameworks.png"),
-  xkcd: require("../assets/xkcd.png"),
-  how: require("../assets/how.gif"),
-  fire: require("../assets/fire.gif"),
-  holdOn: require("../assets/hold-on.gif"),
-  browserSupport: require("../assets/browserSupport.png"),
-  browsers: require("../assets/browsers.gif"),
-  shadow: require("../assets/shadow.gif"),
-  party2: require("../assets/party2.gif"),
-  party3: require("../assets/party3.gif"),
-  polymer: require("../assets/polymer.png"),
-  build: require("../assets/build.jpg"),
+  textWebcomponents: img_textWebcomponents,
+  textHtml: img_textHtml,
+  textCustomelements: img_textCustomelements,
+  textThankyou: img_textThankyou,
+  textGoffertvangool: img_textGoffertvangool,
+  swirl: img_swirl,
+  party: img_party,
+  frameworks: img_frameworks,
+  xkcd: img_xkcd,
+  how: img_how,
+  fire: img_fire,
+  holdOn: img_holdOn,
+  browserSupport: img_browserSupport,
+  browsers: img_browsers,
+  shadow: img_shadow,
+  party2: img_party2,
+  party3: img_party3,
+  polymer: img_polymer,
+  build: img_build,
 };
 
 preloader(images);
@@ -232,7 +271,7 @@ export default class Presentation extends React.Component {
             <CodePane
               textSize="3rem"
               lang="html"
-              source={require("raw!../assets/tags.txt")}
+              source={raw_tags}
             />
           </Slide>
 
@@ -253,7 +292,7 @@ export default class Presentation extends React.Component {
               <CodePane
                 textSize="2.6rem"
                 lang="html"
-                source={require("raw!../assets/divs.txt")}
+                source={raw_divs}
               />
             </div>
           </Slide>
@@ -264,7 +303,7 @@ export default class Presentation extends React.Component {
                 background="black"
                 textSize="2.5rem"
                 lang="javascript"
-                source={require("raw!../assets/jquery.txt")}
+                source={raw_jquery}
               />
             </div>
           </Slide>
@@ -275,7 +314,7 @@ export default class Presentation extends React.Component {
                 backgroundColor="black"
                 textSize="2.5rem"
                 lang="javascript"
-                source={require("raw!../assets/vanilla.txt")}
+                source={raw_vanilla}
               />
             </div>
           </Slide>
@@ -291,7 +330,7 @@ export default class Presentation extends React.Component {
             <CodePane
               textSize="3rem"
               lang="html"
-              source={require("raw!../assets/tags.txt")}
+              source={raw_tags}
             />
             <Appear>
               <CodePane
@@ -299,7 +338,7 @@ export default class Presentation extends React.Component {
                 margin="-1em 0 0 0"
                 textSize="3rem"
                 lang="html"
-                source={require("raw!../assets/tags2.txt")}
+                source={raw_tags2}
               />
             </Appear>
           </Slide>
@@ -337,7 +376,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/1.html")}
+            code={raw_code_1}
             ranges={[
               { loc: [0, 13], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Custom Element</Text>},
               { loc: [0, 1], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Standard HTML</Text>},
@@ -357,7 +396,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/2.html")}
+            code={raw_code_2}
             ranges={[
               { loc: [0, 18], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Let&#39;s get rid of that innerHTML</Text> },
               { loc: [2, 6], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We define a template for our content</Text> },
@@ -374,7 +413,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/3.html")}
+            code={raw_code_3}
             ranges={[
               { loc: [0, 14], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Styling is easy</Text>},
               { loc: [7, 12], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We can use plain CSS</Text> },
@@ -397,7 +436,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/4.html")}
+            code={raw_code_4}
             ranges={[
               { loc: [4, 13], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">ShadowDOM encapsulates our styles within our element</Text>},
               { loc: [16, 22], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We just have to change our connectedCallback a little</Text> },
@@ -413,7 +452,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/5.html")}
+            code={raw_code_5}
             ranges={[
               { loc: [2, 7], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Properties and Attributes</Text>},
               { loc: [23, 24], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Properties are like instance variables</Text>},
@@ -427,7 +466,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/6.html")}
+            code={raw_code_6}
             ranges={[
               { loc: [8, 21], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">The Constructor</Text>},
               { loc: [7, 9], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We use normal ES6 Classes, so we can also use the constructor()</Text>},
@@ -445,7 +484,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/7.html")}
+            code={raw_code_7}
             ranges={[
               { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Additional styling</Text>},
               { loc: [6, 12], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">In your stylesheet, the :host selector refers to your element itself</Text>},
@@ -465,7 +504,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/8.html")}
+            code={raw_code_8}
             ranges={[
               { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Some more advanced stuff</Text>},
               { loc: [2, 7], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We want a nice way to access our internal elements with an ID</Text>},
@@ -484,7 +523,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/9.html")}
+            code={raw_code_9}
             ranges={[
               { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">State Management</Text>},
               { loc: [2, 7], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Our element can have some internal state</Text>},
@@ -504,7 +543,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/10.html")}
+            code={raw_code_10}
             ranges={[
               { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We can easily create a simple 'data-binding'</Text>},
               { loc: [2, 7], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Lets make a counter</Text>},
@@ -521,7 +560,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/11.html")}
+            code={raw_code_11}
             ranges={[
               { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Attributes are useful to semantically set our initial state</Text>},
               { loc: [0, 1], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We want our element to be configurable from HTML</Text>},
@@ -534,7 +573,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/12.html")}
+            code={raw_code_12}
             ranges={[
               { loc: [0, 17], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We can also observe changes to our attribute</Text>},
               { loc: [17, 20], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">We have to tell the browser what attributes we want to observe</Text>},
@@ -551,7 +590,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/15.html")}
+            code={raw_code_15}
             ranges={[
               { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Distributing child nodes</Text>},
               { loc: [0, 3], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">Sometimes we want our elements to carry child nodes</Text>},
@@ -566,7 +605,7 @@ export default class Presentation extends React.Component {
             padding="0"
             transition={["slide"]}
             lang="html"
-            code={require("raw!../assets/code/18.html")}
+            code={raw_code_18}
             ranges={[
               { loc: [0, 15], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">You can make things as complex as you can imagine</Text>},
               { loc: [49, 58], note: <Text margin="0" textSize="0.8em" lineHeight={1} textColor="white">When a property is set, update bindings, reflect to attribute, and fire an event</Text>},

@@ -1,3 +1,4 @@
 FROM ruphin/webserve
 
-COPY . /usr/share/nginx/html
+# Serves the static site built by `npm run build`
+COPY dist /usr/share/nginx/html
